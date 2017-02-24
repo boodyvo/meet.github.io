@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./compiled/flipclock.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="./compiled/flipclock.js"></script>
+    <title> Встреча </title>
+</head>
+<body>
+
+    <div class="content">
+
+        <div class="message"> Напоминаю, что встречаемся на Олимпийской через </div>
+        <div class="clock" style="margin:2em;"></div>
+
+    </div>
+
+    <script type="text/javascript">
+        var clock;
+        $(document).ready(function() {
+            var clock;
+
+            var currentDate = new Date();
+            var futureDate  = new Date(currentDate.getFullYear(), 1, 24, 15);
+            var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+            clock = $('.clock').FlipClock(diff, {
+                clockFace: 'DailyCounter',
+                countdown: true
+            });
+        });
+    </script>
+
+</body>
+</html>
