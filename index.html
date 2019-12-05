@@ -12,7 +12,7 @@
 
     <div class="content">
 
-        <div class="message"> Напоминаю, что встречаемся на Лыбедской через </div>
+        <div class="message"> Meeting </div>
         <div class="clock" style="margin:2em;"></div>
 
     </div>
@@ -23,7 +23,7 @@
             var clock;
 
             var currentDate = new Date();
-            var futureDate  = new Date(currentDate.getFullYear(), 2, 22, 15);
+            var futureDate  = new Date(currentDate.getFullYear(), 11, 13, 20, 30);
             var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
             clock = $('.clock').FlipClock(diff, {
                 clockFace: 'DailyCounter',
